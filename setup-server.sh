@@ -6,9 +6,11 @@ bash $current_dir_path/clear-crontab.sh
 # Format: setup-mirror.sh \
 #             source-username source-project \
 #             target-username target-project \
-#             source-website target-website
+#             source-website target-website \
+#             [sudo]
 
 bash $current_dir_path/setup-mirror.sh \
     dubious-developments UnSHACLed \
     dubious-developments UnSHACLed-client \
-    github.com github.ugent.be
+    github.com github.ugent.be \
+    $1

@@ -3,7 +3,8 @@
 # Format: setup-mirror.sh \
 #             source-username source-project \
 #             target-username target-project \
-#             source-website target-website
+#             source-website target-website \
+#             [sudo]
 
 # Initialize some variables
 source_username=$1
@@ -12,6 +13,7 @@ target_username=$3
 target_project_name=$4
 source_website=$5
 target_website=$6
+sudo_or_not=$7
 mirror_script_path=$(pwd)/$1/mirror-$2.sh
 user_path=$(pwd)/$1
 clone_path=$user_path/$2.git
@@ -30,4 +32,4 @@ chmod +x $mirror_script_path
 
 # crontab file
 cron_line="*/5 * * * * $mirror_script_path >$user_path/mirror-log-$2 2>&1"
-(crontab -l; echo "$cron_line") | crontab -
+($7 crontab -l; echo "$cron_line") | $7 crontab -
