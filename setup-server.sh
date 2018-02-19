@@ -12,3 +12,8 @@ bash $current_dir_path/setup-mirror.sh \
     dubious-developments UnSHACLed \
     dubious-developments UnSHACLed-client \
     github.com github.ugent.be
+
+bash $current_dir_path/setup-mirror.sh \
+    dubious-developments UnSHACLed-server \
+    dubious-developments UnSHACLed-server \
+    github.com github.ugent.be
