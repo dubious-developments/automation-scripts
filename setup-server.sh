@@ -8,7 +8,7 @@ bash $current_dir_path/clear-crontab.sh
 #             target-username target-project \
 #             source-website target-website
 
-bash $current_dir_path/setup-single-user.sh \
+bash $current_dir_path/setup-mirror.sh \
     dubious-developments UnSHACLed \
     dubious-developments UnSHACLed-client \
     github.com github.ugent.be
