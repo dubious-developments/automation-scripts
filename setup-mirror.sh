@@ -18,7 +18,7 @@ mirror_script_path=$(pwd)/$1/mirror-$2.sh
 user_path=$(pwd)/$1
 
 # Install infrastructure as regular user.
-sudo -u $(whoami) $current_dir_path/setup-mirror-infrastructure.sh \
+$current_dir_path/setup-mirror-infrastructure.sh \
   $1 $2 $3 $4 $5 $6 $user_path $mirror_script_path
 
 # crontab file
