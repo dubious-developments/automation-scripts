@@ -14,12 +14,14 @@ target_username=$3
 target_project_name=$4
 source_website=$5
 target_website=$6
-mirror_script_path=$(pwd)/$1/mirror-$2.sh
 user_path=$(pwd)/$1
+mirror_script_path=$user_path/mirror-$2.sh
 
 # Install infrastructure as regular user.
-sudo -u $(whoami) $current_dir_path/setup-mirror-infrastructure.sh \
+$current_dir_path/setup-mirror-infrastructure.sh \
   $1 $2 $3 $4 $5 $6 $user_path $mirror_script_path
+
+sudo chown $(whoami) -R $(user_path)
 
 # crontab file
 cron_line="*/5 * * * * $mirror_script_path >$user_path/mirror-log-$2 2>&1"
