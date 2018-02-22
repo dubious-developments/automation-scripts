@@ -27,3 +27,9 @@ bash $current_dir_path/setup-mirror.sh \
     dubious-developments UnSHACLed-server \
     dubious-developments UnSHACLed-server \
     github.com github.ugent.be
+
+# Mirror the UnSHACLed waterfall repo.
+bash $current_dir_path/setup-mirror.sh \
+    dubious-developments UnSHACLed-waterfall \
+    dubious-developments UnSHACLed-waterfall \
+    github.com github.ugent.be
