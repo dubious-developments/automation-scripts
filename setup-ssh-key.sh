@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-cron_line="*/5 * * * * ssh-add ~/.ssh/unshacled_waterfall_rsa"
+cron_line="*/5 * * * * ssh-add $1"
 (crontab -l; echo "$cron_line") | crontab -
