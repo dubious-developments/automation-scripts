@@ -5,6 +5,12 @@ current_dir_path=$(dirname $0)
 # Clear the crontab.
 bash $current_dir_path/clear-crontab.sh
 
+# Format: setup-ssh-key.sh path-to-key
+
+bash $current_dir_path/setup-ssh-key.sh ~/.ssh/id_rsa
+bash $current_dir_path/setup-ssh-key.sh ~/.ssh/unshacled_server_rsa
+bash $current_dir_path/setup-ssh-key.sh ~/.ssh/unshacled_waterfall_rsa
+
 # Format: setup-mirror.sh \
 #             source-username source-project \
 #             target-username target-project \
